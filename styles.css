@@ -1,0 +1,112 @@
+/*Added for Visual Effects*/
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        270deg,
+        #0066ff,
+        #ff3333,
+        #00cc66,
+        #ffcc00
+    );
+    background-size: 800% 800%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 25% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 75% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.left-panel {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-panel {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image img {
+    width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 15px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.custom-card {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 18px;
+    width: 90%;
+    max-width: 520px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ff69b4, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+.hover-box {
+    padding: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hover-box:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.35);
+}
+
+input[type="radio"],
+select {
+    transition: transform 0.2s ease;
+}
+
+input[type="radio"]:hover,
+select:hover {
+    transform: scale(1.05);
+}
+.btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
